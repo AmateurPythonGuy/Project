@@ -1,2 +1,3 @@
 # Project
-A CS project integrating Python and MySQL
+
+#### Write documentation here
