@@ -1,8 +1,8 @@
 # Tables
+All the tables used in this project
+### ITEMS
 
-## ITEMS
-
-create table ITEMS (ITEM_ID int primary key, ITEM_NAME varchar(45), QUANTITY int, PRICE int, DOM date);
+`create table ITEMS (ITEM_ID int primary key, ITEM_NAME varchar(45), QUANTITY int, PRICE int, DOM date);`
 
 ```txt
 desc items;
@@ -19,11 +19,11 @@ desc items;
 ```
 
 
-## CART
+### CART
 
-create table CART (TRANSACTION_ID int primary key, C_ID int, ITEM_ID int, ITEM_NAME varchar(45) ,PRICE int);
+`create table CART (TRANSACTION_ID int primary key, C_ID int, ITEM_ID int, ITEM_NAME varchar(45) ,PRICE int);`
 
-
+```txt
 desc cart;
 +----------------+-------------+------+-----+---------+-------+
 | Field          | Type        | Null | Key | Default | Extra |
@@ -35,14 +35,14 @@ desc cart;
 | PRICE          | int(11)     | YES  |     | NULL    |       |
 +----------------+-------------+------+-----+---------+-------+
 5 rows in set (0.02 sec)
+```
 
 
+### CUSTOMERS
 
-## CUSTOMERS
+`create table CUSTOMERS (C_ID int primary key, NAME varchar(25), PHONE_NO int(10), EMAIL varchar(55));`
 
-create table CUSTOMERS (C_ID int primary key, NAME varchar(25), PHONE_NO int(10), EMAIL varchar(55));
-
-
+```txt
 desc customers;
 +----------+-------------+------+-----+---------+-------+
 | Field    | Type        | Null | Key | Default | Extra |
@@ -53,14 +53,14 @@ desc customers;
 | EMAIL    | varchar(55) | YES  |     | NULL    |       |
 +----------+-------------+------+-----+---------+-------+
 4 rows in set (0.03 sec)
+```
 
 
+### TRANSACTIONS
 
-## TRANSACTIONS
+`create table TRANSACTIONS (T_ID int primary key, C_ID int, MODE_OF_PAYMENT varchar(25), STATUS varchar(5));`
 
-create table TRANSACTIONS (T_ID int primary key, C_ID int, MODE_OF_PAYMENT varchar(25), STATUS varchar(5));
-
-
+```txt
 desc transactions;
 +-----------------+-------------+------+-----+---------+-------+
 | Field           | Type        | Null | Key | Default | Extra |
@@ -71,14 +71,14 @@ desc transactions;
 | STATUS          | varchar(5)  | YES  |     | NULL    |       |
 +-----------------+-------------+------+-----+---------+-------+
 4 rows in set (0.03 sec)
+```
 
 
+### DELIVERY
 
-## DELIVERY
+`create table DELIVERY (E_ID int primary key, T_ID int, DESTINATION varchar(70), STATUS varchar(5));`
 
-create table DELIVERY (E_ID int primary key, T_ID int, DESTINATION varchar(70), STATUS varchar(5));
-
-
+```txt
 desc delivery;
 +-------------+-------------+------+-----+---------+-------+
 | Field       | Type        | Null | Key | Default | Extra |
@@ -89,3 +89,4 @@ desc delivery;
 | STATUS      | varchar(5)  | YES  |     | NULL    |       |
 +-------------+-------------+------+-----+---------+-------+
 4 rows in set (0.03 sec)
+```
