@@ -1,8 +1,7 @@
 # Tables
 All the tables used in this project
-### ITEMS
 
-`create table ITEMS (ITEM_ID int primary key, ITEM_NAME varchar(45), QUANTITY int, PRICE int, DOM date);`
+### ITEMS
 
 ```txt
 desc items;
@@ -13,34 +12,28 @@ desc items;
 | ITEM_NAME | varchar(45) | YES  |     | NULL    |       |
 | QUANTITY  | int(11)     | YES  |     | NULL    |       |
 | PRICE     | int(11)     | YES  |     | NULL    |       |
-| DOM       | date        | YES  |     | NULL    |       |
 +-----------+-------------+------+-----+---------+-------+
-5 rows in set (0.06 sec)
+4 rows in set (0.07 sec)
 ```
-
 
 ### CART
 
-`create table CART (TRANSACTION_ID int primary key, C_ID int, ITEM_ID int, ITEM_NAME varchar(45) ,PRICE int);`
-
 ```txt
 desc cart;
-+----------------+-------------+------+-----+---------+-------+
-| Field          | Type        | Null | Key | Default | Extra |
-+----------------+-------------+------+-----+---------+-------+
-| TRANSACTION_ID | int(11)     | NO   | PRI | NULL    |       |
-| C_ID           | int(11)     | YES  |     | NULL    |       |
-| ITEM_ID        | int(11)     | YES  |     | NULL    |       |
-| ITEM_NAME      | varchar(45) | YES  |     | NULL    |       |
-| PRICE          | int(11)     | YES  |     | NULL    |       |
-+----------------+-------------+------+-----+---------+-------+
-5 rows in set (0.02 sec)
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| C_ID  | int(11)     | YES  |     | NULL    |       |
+| I_ID  | int(11)     | YES  |     | NULL    |       |
+| Name  | varchar(45) | YES  |     | NULL    |       |
+| Qty   | int(11)     | YES  |     | NULL    |       |
+| Price | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.13 sec)
 ```
 
 
 ### CUSTOMERS
-
-`create table CUSTOMERS (C_ID int primary key, NAME varchar(25), PHONE_NO int(10), EMAIL varchar(55));`
 
 ```txt
 desc customers;
@@ -52,13 +45,11 @@ desc customers;
 | PHONE_NO | int(10)     | YES  |     | NULL    |       |
 | EMAIL    | varchar(55) | YES  |     | NULL    |       |
 +----------+-------------+------+-----+---------+-------+
-4 rows in set (0.03 sec)
+4 rows in set (0.59 sec)
 ```
 
 
 ### TRANSACTIONS
-
-`create table TRANSACTIONS (T_ID int primary key, C_ID int, MODE_OF_PAYMENT varchar(25), STATUS varchar(5));`
 
 ```txt
 desc transactions;
@@ -68,25 +59,21 @@ desc transactions;
 | T_ID            | int(11)     | NO   | PRI | NULL    |       |
 | C_ID            | int(11)     | YES  |     | NULL    |       |
 | MODE_OF_PAYMENT | varchar(25) | YES  |     | NULL    |       |
-| STATUS          | varchar(5)  | YES  |     | NULL    |       |
+| status          | tinyint(1)  | YES  |     | NULL    |       |
 +-----------------+-------------+------+-----+---------+-------+
-4 rows in set (0.03 sec)
+4 rows in set (0.09 sec)
 ```
 
 
-### DELIVERY
-
-`create table DELIVERY (E_ID int primary key, T_ID int, DESTINATION varchar(70), STATUS varchar(5));`
+### DELIVERIES
 
 ```txt
-desc delivery;
 +-------------+-------------+------+-----+---------+-------+
 | Field       | Type        | Null | Key | Default | Extra |
 +-------------+-------------+------+-----+---------+-------+
-| E_ID        | int(11)     | NO   | PRI | NULL    |       |
-| T_ID        | int(11)     | YES  |     | NULL    |       |
-| DESTINATION | varchar(70) | YES  |     | NULL    |       |
-| STATUS      | varchar(5)  | YES  |     | NULL    |       |
+| T_ID        | int(11)     | NO   | PRI | NULL    |       |
+| DESTINATION | varchar(75) | YES  |     | NULL    |       |
+| STATUS      | tinyint(1)  | YES  |     | NULL    |       |
 +-------------+-------------+------+-----+---------+-------+
-4 rows in set (0.03 sec)
+3 rows in set (0.14 sec)
 ```
