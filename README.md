@@ -1,5 +1,9 @@
 # Project
-A CS project integrating Python and MySQL
+MySQL-ing with python
+
+Description: 
+
+A new "online shopping web application" type of application, called 'Amazon't' has entered the market. How will Jeff Bezos keep his business alive anymore? (;-;)  
 
 ## Credits
 Abhinav - Documentation (TBA)
