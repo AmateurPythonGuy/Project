@@ -17,6 +17,7 @@ George - Debugging/testing
 # Tables
 All the tables used in this project
 
+**All these tables are in a database named "project"**
 ### ITEMS
 
 ```txt
