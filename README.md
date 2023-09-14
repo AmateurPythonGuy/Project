@@ -1,15 +1,91 @@
 # Project
 A CS project integrating Python and MySQL
 
-### Write rest of documentation here
+## Credits
+Abhinav - Documentation (TBA)
+
+Woitiwe(me) - Programming/Coding
+
+George - Debugging/testing
+
+### Insert rest of documentation here
+
+# Tables
+All the tables used in this project
+
+### ITEMS
+
+```txt
+desc items;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| ITEM_ID   | int(11)     | NO   | PRI | NULL    |       |
+| ITEM_NAME | varchar(45) | YES  |     | NULL    |       |
+| QUANTITY  | int(11)     | YES  |     | NULL    |       |
+| PRICE     | int(11)     | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.07 sec)
+```
+
+### CART
+
+```txt
+desc cart;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| C_ID  | int(11)     | YES  |     | NULL    |       |
+| I_ID  | int(11)     | YES  |     | NULL    |       |
+| Name  | varchar(45) | YES  |     | NULL    |       |
+| Qty   | int(11)     | YES  |     | NULL    |       |
+| Price | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+5 rows in set (0.13 sec)
+```
 
 
-# Some pointers (for the dev(s))
+### CUSTOMERS
 
-Main acts as the base of the whole program
+```txt
+desc customers;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| C_ID     | int(11)     | NO   | PRI | NULL    |       |
+| NAME     | varchar(25) | YES  |     | NULL    |       |
+| PHONE_NO | int(10)     | YES  |     | NULL    |       |
+| EMAIL    | varchar(55) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.59 sec)
+```
 
-mainFunctions redirects the functional input from the user to whatever the hell they want to do
 
-adminFunctions deals with all the functions related to being an admin
+### TRANSACTIONS
 
-A new seperate file called 'userFunctions' coming soon. I think you know what its supposed to do
+```txt
+desc transactions;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| T_ID            | int(11)     | NO   | PRI | NULL    |       |
+| C_ID            | int(11)     | YES  |     | NULL    |       |
+| MODE_OF_PAYMENT | varchar(25) | YES  |     | NULL    |       |
+| status          | tinyint(1)  | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+4 rows in set (0.09 sec)
+```
+
+
+### DELIVERIES
+
+```txt
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| T_ID        | int(11)     | NO   | PRI | NULL    |       |
+| DESTINATION | varchar(75) | YES  |     | NULL    |       |
+| STATUS      | tinyint(1)  | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+3 rows in set (0.14 sec)
+```
