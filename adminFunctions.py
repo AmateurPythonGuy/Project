@@ -82,7 +82,7 @@ class Transactions:
         iD = int(input("Enter transaction ID: "))
         value = int(input("Completed/Incomplete (0/1): "))
 
-        c.execute(f"update table transactions set STATUS={value} where T_ID={iD}")
+        c.execute(f"update transactions set STATUS={value} where T_ID={iD}")
         db.commit()
 
         print("Updated!")
