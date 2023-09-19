@@ -86,7 +86,7 @@ def adminFunctions(funcNum):
                 af.Items.insertItem()
                 print("Item added\n")
             elif func1 == 2:
-                af.deleteItem()
+                af.Items.deleteItem()
                 print("Item deleted\n")
             elif func1 == 3:
                 af.Items.searchItem()
