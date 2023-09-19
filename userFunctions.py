@@ -88,6 +88,7 @@ class Cart:
             print(i)
     
     def confirm():
+        ciD = int(input("Enter customer ID: "))
         moP = input("Enter mode of payment: (Cash/Credit/UPI): ")
 
         t_ID = randint(500, 599)
