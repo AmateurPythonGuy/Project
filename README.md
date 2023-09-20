@@ -6,18 +6,18 @@ Description:
 A new "online shopping web application" type of application, called 'Amazon't' has entered the market. How will Jeff Bezos keep his business alive anymore? (;-;)  
 
 ## Credits
-Abhinav - Documentation (TBA)
+Abhinav - Documentation
 
 Woitiwe(me) - Programming/Coding
 
 George - Debugging/testing
 
-### Insert rest of documentation here
+### UPDATE: Documentation added as a seperate file
 
 # Tables
 All the tables used in this project
 
-**All these tables are in a database named "project"**
+**Tables are in a database named "project"**
 ### ITEMS
 
 ```txt
